@@ -4,6 +4,10 @@
 - configured tailwindCSS
 - header
 
+login form
+
+- if there are many more features, use formik library for validation.
+
 # Features
 
 - Login/Sign Up
