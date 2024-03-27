@@ -3,8 +3,13 @@
 - create react app
 - configured tailwindCSS
 - header
-
-login form
+- Routing of App
+- login Form
+- Sign up Form
+- Form validation
+- useRef Hook
+- Firebase Setup
+- Deploying our app to production
 
 - if there are many more features, use formik library for validation.
 
