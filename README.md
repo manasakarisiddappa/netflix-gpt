@@ -13,6 +13,7 @@
 - Create SignUp User Account
 - Implement Sign In, Sign Up User Api
 - Created Redux Store with userSlice
+- signup bug Fix
 
 - if there are many more features, use formik library for validation.
 
