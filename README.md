@@ -14,6 +14,18 @@
 - Implement Sign In, Sign Up User Api
 - Created Redux Store with userSlice
 - signup bug Fix
+- unsubscribing before unmounting the component
+- Add hard coded values to constants file
+- Register TMDB API & create an app & get access token
+- Get data from TMDB now playing movies list API
+- Custom Hook for Now playing movies
+- Create movieSlice
+- Update Store with movies Data
+- Planning for mainContainer & necessary container
+- fetch data for Trailer Video
+- Update store with Trailer Video data
+- Embedded the youtube video and make it autoplay and mute
+- Tailwind Classes to make it look good
 
 - if there are many more features, use formik library for validation.
 

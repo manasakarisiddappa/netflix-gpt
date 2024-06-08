@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
@@ -33,6 +33,8 @@ const Header = () => {
         navigate("/");
       }
     });
+
+    return () => unsubscribe(); // unsubscribing from the listener when the component is unmounting.
   }, []);
 
   const handleSignOut = () => {
@@ -59,6 +61,7 @@ const Header = () => {
             src={USER_AVATAR}
             onClick={toggleDropDown}
           />
+          {userName}
           {isDropDownOpen && (
             <div className="absolute bg-gray-800 text-gray-300  mt-11 md:mt-12 w-30 md:w-40 hover:cursor-pointer  right-10 md:right-10 p-2 rounded-lg shadow-lg ">
               <ul className="list-none p-0">
