@@ -26,6 +26,11 @@
 - Update store with Trailer Video data
 - Embedded the youtube video and make it autoplay and mute
 - Tailwind Classes to make it look good
+- Top rated, upcoming etc movies are fetched.
+- GPT Search Page
+- GPT Search Bar
+- Multi-language Feature in our app
+- Integrate GPT API.
 
 - if there are many more features, use formik library for validation.
 

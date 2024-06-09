@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { USER_AVATAR, LOGO } from "../utils/constants";
+import { USER_AVATAR, LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { Navigate, useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../utils/userSlice";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSLice";
 
 const Header = () => {
   const navigate = useNavigate();
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const dispatch = useDispatch();
 
   const userName = user?.displayName;
@@ -37,6 +40,14 @@ const Header = () => {
     return () => unsubscribe(); // unsubscribing from the listener when the component is unmounting.
   }, []);
 
+  const handleGptSearchClick = () => {
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  };
+
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -54,14 +65,32 @@ const Header = () => {
       <img className="w-28 mx-3 py-2 md:w-52 md:mx-0" src={LOGO} alt="logo" />
 
       {user && (
-        <div>
+        <div className="flex p-2 items-center">
+          {showGptSearch && (
+            <select
+              className="p-2 bg-gray-900 text-white m-2"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            className="h-9 px-4 mx-4 py-2 rounded-lg bg-purple-800 text-white"
+            onClick={handleGptSearchClick}
+          >
+            {showGptSearch ? "Homepage" : "GPT Search"}
+          </button>
           <img
             className="w-7 md:w-9  mt-3 md:mt-2 h-7 md:h-9 cursor-pointer rounded-md"
             alt="usericon"
             src={USER_AVATAR}
             onClick={toggleDropDown}
           />
-          {userName}
+          <span className="text-white">{userName}</span>
           {isDropDownOpen && (
             <div className="absolute bg-gray-800 text-gray-300  mt-11 md:mt-12 w-30 md:w-40 hover:cursor-pointer  right-10 md:right-10 p-2 rounded-lg shadow-lg ">
               <ul className="list-none p-0">

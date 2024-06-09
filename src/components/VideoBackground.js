@@ -13,10 +13,8 @@ const VideoBackground = ({ movieId }) => {
         className="w-full aspect-video"
         src={`https://www.youtube.com/embed/${movieKey}?si=ZfFfv23sjx5iPe1B&autoplay=1&mute=1`}
         title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
     </div>
   );
