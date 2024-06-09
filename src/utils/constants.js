@@ -15,3 +15,5 @@ export const API_OPTIONS = {
 
 export const MAX_WORDS = 30;
 export const MAX_TITLE = 3;
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";

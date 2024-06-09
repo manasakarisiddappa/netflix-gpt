@@ -12,7 +12,7 @@ const VideoTitle = ({ original_title, overview }) => {
     .join(" ");
 
   return (
-    <div className="w-full aspect-video pt-[20%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black">
+    <div className="w-full aspect-video pt-[15%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black">
       <h1 className="text-2xl md:text-6xl font-bold">{truncatedTitle}</h1>
       <p className="hidden md:inline-block py-6 text-lg w-1/4">
         {truncatedDescription}
