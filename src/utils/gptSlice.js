@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { activate } from "firebase/remote-config";
 
 const gptSlice = createSlice({
   name: "gpt",

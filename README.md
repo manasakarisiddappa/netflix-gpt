@@ -1,3 +1,33 @@
+# Features
+
+- Login/Sign Up
+  - Sign In /Sign up Form
+  - redirect to Browse Page
+- Browse (after authentication)
+
+  - Header
+  - Main Movie
+    - Trailer in Background
+    - Title and Description
+    - MovieSuggestions
+      - MovieLists \* N
+
+- NetflixGPT
+  - Search Bar
+  - Movie Suggestions
+
+# SignInPage
+
+# SignUp Page
+
+# Browse Page
+
+# Movie List
+
+# Search Page
+
+# Search Results
+
 # NetFlix GPT
 
 - create react app
@@ -33,24 +63,6 @@
 - Integrate GPT API.
 
 - if there are many more features, use formik library for validation.
-
-# Features
-
-- Login/Sign Up
-  - Sign In /Sign up Form
-  - redirect to Browse Page
-- Browse (after authentication)
-
-  - Header
-  - Main Movie
-    - Trailer in Background
-    - Title and Description
-    - MovieSuggestions
-      - MovieLists \* N
-
-- NetflixGPT
-  - Search Bar
-  - Movie Suggestions
 
 # Getting Started with Create React App
 

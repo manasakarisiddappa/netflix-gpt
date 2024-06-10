@@ -42,11 +42,11 @@ const GptSearchBar = () => {
     //   const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
 
     const gptMovies = [
-      "Andaz Apna Apna",
-      "Hera Pheri",
-      "Chupke Chupke",
-      "Jaane Bhi Do Yaaro",
-      "Padosan",
+      "Hereditary",
+      "The Conjuring",
+      "Get Out",
+      "A Quiet Place",
+      "The Babadook",
     ];
 
     // For each movie I will search TMDB API
@@ -62,7 +62,7 @@ const GptSearchBar = () => {
   return (
     <div className="pt-[70%] md:pt-[10%] flex justify-center">
       <form
-        className="w-full md:w-1/2 bg-black grid grid-cols-12"
+        className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-md"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
