@@ -27,3 +27,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "punjabi", name: "Punjabi" },
   { identifier: "bengali", name: "Bengali" },
 ];
+
+export const OPENAI_KEY = "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";

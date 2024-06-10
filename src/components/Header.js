@@ -13,6 +13,7 @@ const Header = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const user = useSelector((store) => store.user);
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const selectLang = useSelector((store) => store.config.lang);
   const dispatch = useDispatch();
 
   const userName = user?.displayName;
@@ -70,6 +71,7 @@ const Header = () => {
             <select
               className="p-2 bg-gray-900 text-white m-2"
               onChange={handleLanguageChange}
+              value={selectLang}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang.identifier} value={lang.identifier}>
