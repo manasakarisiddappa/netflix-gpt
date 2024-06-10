@@ -5,6 +5,7 @@ import { API_OPTIONS } from "../utils/constants";
 
 const useTopRatedMovies = () => {
   const dispatch = useDispatch();
+  const topRatedMovies = useSelector((store) => store.movies.popularMovies);
 
   const getTopRatedMovies = async () => {
     let data = await fetch(
@@ -16,7 +17,7 @@ const useTopRatedMovies = () => {
   };
 
   useEffect(() => {
-    getTopRatedMovies();
+    !topRatedMovies && getTopRatedMovies();
   }, []);
 };
 
