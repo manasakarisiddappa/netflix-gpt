@@ -17,16 +17,28 @@
   - Movie Suggestions
 
 # SignInPage
+![SigninPage](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/b15a809a-7bea-490f-80e9-332a17585e3d)
+
 
 # SignUp Page
+![signupPage](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/425ab713-f16a-4ef1-9c17-4d34edefd320)
+
 
 # Browse Page
+![NetflixPage](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/6c164353-a6b6-4854-936b-dfb4f6faa8fa)
+
 
 # Movie List
+![movielist](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/99eae9e8-d56c-4828-9215-698b99d946fe)
+
 
 # Search Page
+![searchPage](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/d12857df-81cd-4d1c-aed7-fe279c04f613)
+
 
 # Search Results
+![searchresults](https://github.com/manasakarisiddappa/netflix-gpt/assets/48428277/ab6fe314-aff2-47f2-b8cb-be282ea8f319)
+
 
 # NetFlix GPT
 
